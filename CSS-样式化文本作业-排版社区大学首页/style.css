@@ -1,0 +1,104 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+html{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+header{
+  font-size: 2rem;
+}
+body{
+  font-size: 1.5rem;
+}
+body p{
+  line-height: 1.5;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+h1,footer{
+  text-align: center;
+}
+section p{
+  text-indent: 20px;
+}
+a{
+  color: #a66;
+  text-decoration: none;
+}
+a:link{
+
+}
+a:visited{
+
+}
+a:hover{
+  border-bottom: 1px solid;
+}
+a:focus{
+  text-decoration: underline;
+  outline: none;
+}
+a:active{
+  background-color: aqua;
+  color: black;
+}
+a[href*="http"]{
+  background: url(external-link-52.png) no-repeat 100% 0;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
+ul{
+  line-height: 1.5;
+  list-style-type: square;
+}
+nav li{
+  padding: 10px;
+  border: 1px solid #a66;
+  margin: 10px;
+  line-height: 3;
+  list-style-type: none;
+  text-align: center;
+}
