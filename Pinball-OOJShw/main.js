@@ -19,12 +19,12 @@ function randomColor() {
 		random(0, 255) + ')';
 }
 // Shape "基类"
-function Shape(x, y, velX, velY) {
+function Shape(x, y, velX, velY, exists) {
 	this.x = x;
 	this.y = y;
 	this.velX = velX; //vel means velocity
 	this.velY = velY;
-	this.exists = true;
+	this.exists = exists;
 }
 // 小球模型
 function Ball(x, y, velX, velY, color, size, exists) {
