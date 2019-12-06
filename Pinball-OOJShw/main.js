@@ -32,6 +32,8 @@ function Ball(x, y, velX, velY, color, size, exists) {
 	this.color = color;
 	this.size = size;
 }
+Ball.prototype = Object.create(Shape.prototype);
+Ball.prototype.constructor = Ball;
 
 Ball.prototype.draw = function () {
 	ctx.beginPath();
@@ -80,6 +82,8 @@ function evilCircle(x, y, exists) {
 	this.size = 10;
 	this.setControls();
 }
+evilCircle.prototype = Object.create(Shape.prototype);
+evilCircle.prototype.constructor = evilCircle;
 
 evilCircle.prototype.draw = function () {
 	ctx.beginPath();
@@ -173,9 +177,12 @@ function loop() {
 		++count;
 	}
 	for (var i = 0; i < balls.length; ++i) {
-		balls[i].draw();
-		balls[i].update();
-		balls[i].collisionDetect();
+		if (balls[i].exists) {
+			balls[i].draw();
+			balls[i].update();
+			balls[i].collisionDetect();
+		}
+
 	}
 	evilBall.draw();
 	evilBall.checkBounds();
